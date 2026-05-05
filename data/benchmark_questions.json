@@ -1,0 +1,142 @@
+[
+  {
+    "id": "q01",
+    "question": "Công ty nào do Sam Altman đồng sáng lập phát triển ChatGPT?",
+    "ground_truth": "OpenAI là công ty do Sam Altman đồng sáng lập và phát triển ChatGPT.",
+    "required_entities": ["Sam Altman", "OpenAI", "ChatGPT"],
+    "required_relations": ["FOUNDED_BY", "DEVELOPS"]
+  },
+  {
+    "id": "q02",
+    "question": "Công ty mẹ của Google là công ty nào và CEO là ai?",
+    "ground_truth": "Alphabet là công ty mẹ của Google, và Sundar Pichai là CEO của Alphabet.",
+    "required_entities": ["Google", "Alphabet", "Sundar Pichai"],
+    "required_relations": ["PARENT_OF", "HAS_CEO"]
+  },
+  {
+    "id": "q03",
+    "question": "Những công ty nào cạnh tranh với OpenAI trong mảng AI assistant?",
+    "ground_truth": "Google, Meta, xAI và Anthropic cạnh tranh với OpenAI trong mảng trí tuệ nhân tạo hoặc AI assistants.",
+    "required_entities": ["OpenAI", "Google", "Meta", "xAI", "Anthropic"],
+    "required_relations": ["COMPETES_WITH"]
+  },
+  {
+    "id": "q04",
+    "question": "Microsoft hợp tác với công ty AI nào và dùng nền tảng cloud nào để hỗ trợ AI?",
+    "ground_truth": "Microsoft hợp tác với OpenAI và dùng Azure để host hoặc hỗ trợ các dịch vụ AI.",
+    "required_entities": ["Microsoft", "OpenAI", "Azure"],
+    "required_relations": ["PARTNERS_WITH", "DEVELOPS"]
+  },
+  {
+    "id": "q05",
+    "question": "CEO của Nvidia là ai và Nvidia phát triển nền tảng nào cho AI computing?",
+    "ground_truth": "Jensen Huang là CEO của Nvidia; Nvidia phát triển GPUs, CUDA và AI computing platforms.",
+    "required_entities": ["Nvidia", "Jensen Huang", "CUDA"],
+    "required_relations": ["HAS_CEO", "DEVELOPS"]
+  },
+  {
+    "id": "q06",
+    "question": "AWS cạnh tranh với các nền tảng cloud nào?",
+    "ground_truth": "AWS cạnh tranh với Microsoft Azure và Google Cloud.",
+    "required_entities": ["AWS", "Microsoft Azure", "Google Cloud"],
+    "required_relations": ["COMPETES_WITH"]
+  },
+  {
+    "id": "q07",
+    "question": "Công ty nào phát triển Claude và được Amazon cùng Google đầu tư?",
+    "ground_truth": "Anthropic phát triển Claude và được Amazon cùng Google đầu tư.",
+    "required_entities": ["Anthropic", "Claude", "Amazon", "Google"],
+    "required_relations": ["DEVELOPS", "INVESTS_IN"]
+  },
+  {
+    "id": "q08",
+    "question": "Elon Musk liên quan đến những công ty AI hoặc công nghệ nào trong corpus?",
+    "ground_truth": "Elon Musk là đồng sáng lập OpenAI, CEO của Tesla, và sáng lập xAI.",
+    "required_entities": ["Elon Musk", "OpenAI", "Tesla", "xAI"],
+    "required_relations": ["FOUNDED_BY", "HAS_CEO"]
+  },
+  {
+    "id": "q09",
+    "question": "Google phát triển những sản phẩm hoặc nền tảng nào?",
+    "ground_truth": "Google phát triển Gemini, Google Search, Android và Google Cloud.",
+    "required_entities": ["Google", "Gemini", "Google Search", "Android", "Google Cloud"],
+    "required_relations": ["DEVELOPS"]
+  },
+  {
+    "id": "q10",
+    "question": "Apple cạnh tranh với Google trong lĩnh vực nào?",
+    "ground_truth": "Apple cạnh tranh với Google trong mobile operating systems thông qua iOS và Android.",
+    "required_entities": ["Apple", "Google", "iOS", "Android"],
+    "required_relations": ["COMPETES_WITH", "DEVELOPS"]
+  },
+  {
+    "id": "q11",
+    "question": "Công ty nào phát triển Llama models?",
+    "ground_truth": "Meta phát triển Llama models.",
+    "required_entities": ["Meta", "Llama"],
+    "required_relations": ["DEVELOPS"]
+  },
+  {
+    "id": "q12",
+    "question": "IBM đã mua công ty nào và vào năm nào?",
+    "ground_truth": "IBM acquired Red Hat in 2019.",
+    "required_entities": ["IBM", "Red Hat", "2019"],
+    "required_relations": ["ACQUIRED", "ACQUIRED_IN"]
+  },
+  {
+    "id": "q13",
+    "question": "Công ty nào phát triển Grok và cạnh tranh với Anthropic?",
+    "ground_truth": "xAI phát triển Grok và cạnh tranh với Anthropic.",
+    "required_entities": ["xAI", "Grok", "Anthropic"],
+    "required_relations": ["DEVELOPS", "COMPETES_WITH"]
+  },
+  {
+    "id": "q14",
+    "question": "Ai là CEO của Amazon và Amazon vận hành nền tảng cloud nào?",
+    "ground_truth": "Andy Jassy là CEO của Amazon, và Amazon vận hành AWS.",
+    "required_entities": ["Amazon", "Andy Jassy", "AWS"],
+    "required_relations": ["HAS_CEO", "OPERATES"]
+  },
+  {
+    "id": "q15",
+    "question": "Những công ty nào đặt trụ sở ở San Francisco?",
+    "ground_truth": "OpenAI và Anthropic đặt trụ sở ở San Francisco.",
+    "required_entities": ["OpenAI", "Anthropic", "San Francisco"],
+    "required_relations": ["HEADQUARTERED_IN"]
+  },
+  {
+    "id": "q16",
+    "question": "Satya Nadella là CEO của công ty nào và công ty đó phát triển sản phẩm AI nào?",
+    "ground_truth": "Satya Nadella là CEO của Microsoft, công ty phát triển GitHub Copilot và hợp tác với OpenAI về AI.",
+    "required_entities": ["Satya Nadella", "Microsoft", "GitHub Copilot"],
+    "required_relations": ["HAS_CEO", "DEVELOPS"]
+  },
+  {
+    "id": "q17",
+    "question": "Công ty nào do Larry Page và Sergey Brin sáng lập?",
+    "ground_truth": "Larry Page và Sergey Brin sáng lập Google.",
+    "required_entities": ["Larry Page", "Sergey Brin", "Google"],
+    "required_relations": ["FOUNDED_BY"]
+  },
+  {
+    "id": "q18",
+    "question": "Nvidia hợp tác với những cloud provider nào?",
+    "ground_truth": "Nvidia hợp tác với Microsoft Azure, Google Cloud và Amazon Web Services.",
+    "required_entities": ["Nvidia", "Microsoft Azure", "Google Cloud", "Amazon Web Services"],
+    "required_relations": ["PARTNERS_WITH"]
+  },
+  {
+    "id": "q19",
+    "question": "Tim Cook là CEO của công ty nào và công ty đó phát triển hệ điều hành nào?",
+    "ground_truth": "Tim Cook là CEO của Apple; Apple phát triển macOS và iOS.",
+    "required_entities": ["Tim Cook", "Apple", "macOS", "iOS"],
+    "required_relations": ["HAS_CEO", "DEVELOPS"]
+  },
+  {
+    "id": "q20",
+    "question": "Công ty nào vừa hoạt động trong hybrid cloud vừa phát triển Watson?",
+    "ground_truth": "IBM hoạt động trong hybrid cloud và phát triển Watson.",
+    "required_entities": ["IBM", "hybrid cloud", "Watson"],
+    "required_relations": ["OPERATES_IN", "DEVELOPS"]
+  }
+]

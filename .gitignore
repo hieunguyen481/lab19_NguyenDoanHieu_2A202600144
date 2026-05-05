@@ -1,0 +1,8 @@
+.env
+.venv/
+.venv*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Keep generated lab deliverables in reports/ and figures/.

@@ -1,0 +1,69 @@
+{
+  "num_nodes": 67,
+  "num_edges": 94,
+  "node_types": {
+    "Product": 22,
+    "Company": 13,
+    "Person": 16,
+    "Location": 9,
+    "Year": 4,
+    "Sector": 3
+  },
+  "relation_types": {
+    "COMPETES_WITH": 20,
+    "PARTNERS_WITH": 8,
+    "HAS_CEO": 9,
+    "PARENT_OF": 1,
+    "DEVELOPS": 21,
+    "FOUNDED_BY": 12,
+    "FOUNDED_IN": 3,
+    "HEADQUARTERED_IN": 10,
+    "INVESTS_IN": 3,
+    "OPERATES": 1,
+    "OPERATES_IN": 4,
+    "ACQUIRED": 1,
+    "ACQUIRED_IN": 1
+  },
+  "top_connected_nodes": [
+    {
+      "node": "Google",
+      "degree": 19
+    },
+    {
+      "node": "OpenAI",
+      "degree": 18
+    },
+    {
+      "node": "Microsoft",
+      "degree": 11
+    },
+    {
+      "node": "Nvidia",
+      "degree": 11
+    },
+    {
+      "node": "Anthropic",
+      "degree": 10
+    },
+    {
+      "node": "Apple",
+      "degree": 10
+    },
+    {
+      "node": "IBM",
+      "degree": 8
+    },
+    {
+      "node": "Meta",
+      "degree": 8
+    },
+    {
+      "node": "xAI",
+      "degree": 8
+    },
+    {
+      "node": "AWS",
+      "degree": 7
+    }
+  ]
+}

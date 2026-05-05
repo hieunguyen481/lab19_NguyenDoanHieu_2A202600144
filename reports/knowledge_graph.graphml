@@ -1,0 +1,908 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="weight" attr.type="string"/>
+<key id="d5" for="edge" attr.name="confidence" attr.type="string"/>
+<key id="d4" for="edge" attr.name="sources" attr.type="string"/>
+<key id="d3" for="edge" attr.name="relation" attr.type="string"/>
+<key id="d2" for="node" attr.name="sources" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="AWS">
+  <data key="d0">AWS</data>
+  <data key="d1">Product</data>
+  <data key="d2">doc_004,doc_005</data>
+</node>
+<node id="Azure">
+  <data key="d0">Azure</data>
+  <data key="d1">Product</data>
+  <data key="d2">doc_002,doc_004,doc_005</data>
+</node>
+<node id="Google Cloud">
+  <data key="d0">Google Cloud</data>
+  <data key="d1">Product</data>
+  <data key="d2">doc_003,doc_004,doc_005</data>
+</node>
+<node id="Alphabet">
+  <data key="d0">Alphabet</data>
+  <data key="d1">Company</data>
+  <data key="d2">doc_003</data>
+</node>
+<node id="Sundar Pichai">
+  <data key="d0">Sundar Pichai</data>
+  <data key="d1">Person</data>
+  <data key="d2">doc_003</data>
+</node>
+<node id="Google">
+  <data key="d0">Google</data>
+  <data key="d1">Company</data>
+  <data key="d2">doc_003,doc_007,doc_008,doc_009</data>
+</node>
+<node id="Amazon">
+  <data key="d0">Amazon</data>
+  <data key="d1">Company</data>
+  <data key="d2">doc_005,doc_009</data>
+</node>
+<node id="Alexa">
+  <data key="d0">Alexa</data>
+  <data key="d1">Product</data>
+  <data key="d2">doc_005</data>
+</node>
+<node id="Andy Jassy">
+  <data key="d0">Andy Jassy</data>
+  <data key="d1">Person</data>
+  <data key="d2">doc_005</data>
+</node>
+<node id="Seattle">
+  <data key="d0">Seattle</data>
+  <data key="d1">Location</data>
+  <data key="d2">doc_005</data>
+</node>
+<node id="Anthropic">
+  <data key="d0">Anthropic</data>
+  <data key="d1">Company</data>
+  <data key="d2">doc_008,doc_009</data>
+</node>
+<node id="OpenAI">
+  <data key="d0">OpenAI</data>
+  <data key="d1">Company</data>
+  <data key="d2">doc_001,doc_003,doc_006,doc_008,doc_009</data>
+</node>
+<node id="Claude">
+  <data key="d0">Claude</data>
+  <data key="d1">Product</data>
+  <data key="d2">doc_009</data>
+</node>
+<node id="Daniela Amodei">
+  <data key="d0">Daniela Amodei</data>
+  <data key="d1">Person</data>
+  <data key="d2">doc_009</data>
+</node>
+<node id="Dario Amodei">
+  <data key="d0">Dario Amodei</data>
+  <data key="d1">Person</data>
+  <data key="d2">doc_009</data>
+</node>
+<node id="San Francisco">
+  <data key="d0">San Francisco</data>
+  <data key="d1">Location</data>
+  <data key="d2">doc_001,doc_009</data>
+</node>
+<node id="Apple">
+  <data key="d0">Apple</data>
+  <data key="d1">Company</data>
+  <data key="d2">doc_007</data>
+</node>
+<node id="iOS">
+  <data key="d0">iOS</data>
+  <data key="d1">Product</data>
+  <data key="d2">doc_007</data>
+</node>
+<node id="iPhone">
+  <data key="d0">iPhone</data>
+  <data key="d1">Product</data>
+  <data key="d2">doc_007</data>
+</node>
+<node id="macOS">
+  <data key="d0">macOS</data>
+  <data key="d1">Product</data>
+  <data key="d2">doc_007</data>
+</node>
+<node id="Steve Jobs">
+  <data key="d0">Steve Jobs</data>
+  <data key="d1">Person</data>
+  <data key="d2">doc_007</data>
+</node>
+<node id="Steve Wozniak">
+  <data key="d0">Steve Wozniak</data>
+  <data key="d1">Person</data>
+  <data key="d2">doc_007</data>
+</node>
+<node id="1976">
+  <data key="d0">1976</data>
+  <data key="d1">Year</data>
+  <data key="d2">doc_007</data>
+</node>
+<node id="Tim Cook">
+  <data key="d0">Tim Cook</data>
+  <data key="d1">Person</data>
+  <data key="d2">doc_007</data>
+</node>
+<node id="Cupertino">
+  <data key="d0">Cupertino</data>
+  <data key="d1">Location</data>
+  <data key="d2">doc_007</data>
+</node>
+<node id="Microsoft">
+  <data key="d0">Microsoft</data>
+  <data key="d1">Company</data>
+  <data key="d2">doc_001,doc_002,doc_003</data>
+</node>
+<node id="Android">
+  <data key="d0">Android</data>
+  <data key="d1">Product</data>
+  <data key="d2">doc_003</data>
+</node>
+<node id="Gemini">
+  <data key="d0">Gemini</data>
+  <data key="d1">Product</data>
+  <data key="d2">doc_003</data>
+</node>
+<node id="Google Search">
+  <data key="d0">Google Search</data>
+  <data key="d1">Product</data>
+  <data key="d2">doc_003</data>
+</node>
+<node id="Larry Page">
+  <data key="d0">Larry Page</data>
+  <data key="d1">Person</data>
+  <data key="d2">doc_003</data>
+</node>
+<node id="Sergey Brin">
+  <data key="d0">Sergey Brin</data>
+  <data key="d1">Person</data>
+  <data key="d2">doc_003</data>
+</node>
+<node id="1998">
+  <data key="d0">1998</data>
+  <data key="d1">Year</data>
+  <data key="d2">doc_003</data>
+</node>
+<node id="Mountain View">
+  <data key="d0">Mountain View</data>
+  <data key="d1">Location</data>
+  <data key="d2">doc_003</data>
+</node>
+<node id="IBM">
+  <data key="d0">IBM</data>
+  <data key="d1">Company</data>
+  <data key="d2">doc_010</data>
+</node>
+<node id="Red Hat">
+  <data key="d0">Red Hat</data>
+  <data key="d1">Company</data>
+  <data key="d2">doc_010</data>
+</node>
+<node id="2019">
+  <data key="d0">2019</data>
+  <data key="d1">Year</data>
+  <data key="d2">doc_010</data>
+</node>
+<node id="Red Hat OpenShift">
+  <data key="d0">Red Hat OpenShift</data>
+  <data key="d1">Product</data>
+  <data key="d2">doc_010</data>
+</node>
+<node id="Watson">
+  <data key="d0">Watson</data>
+  <data key="d1">Product</data>
+  <data key="d2">doc_010</data>
+</node>
+<node id="Arvind Krishna">
+  <data key="d0">Arvind Krishna</data>
+  <data key="d1">Person</data>
+  <data key="d2">doc_010</data>
+</node>
+<node id="Armonk">
+  <data key="d0">Armonk</data>
+  <data key="d1">Location</data>
+  <data key="d2">doc_010</data>
+</node>
+<node id="artificial intelligence">
+  <data key="d0">artificial intelligence</data>
+  <data key="d1">Sector</data>
+  <data key="d2">doc_002,doc_010</data>
+</node>
+<node id="hybrid cloud">
+  <data key="d0">hybrid cloud</data>
+  <data key="d1">Sector</data>
+  <data key="d2">doc_010</data>
+</node>
+<node id="Meta">
+  <data key="d0">Meta</data>
+  <data key="d1">Company</data>
+  <data key="d2">doc_006</data>
+</node>
+<node id="Instagram">
+  <data key="d0">Instagram</data>
+  <data key="d1">Product</data>
+  <data key="d2">doc_006</data>
+</node>
+<node id="Llama">
+  <data key="d0">Llama</data>
+  <data key="d1">Product</data>
+  <data key="d2">doc_006</data>
+</node>
+<node id="WhatsApp">
+  <data key="d0">WhatsApp</data>
+  <data key="d1">Product</data>
+  <data key="d2">doc_006</data>
+</node>
+<node id="Mark Zuckerberg">
+  <data key="d0">Mark Zuckerberg</data>
+  <data key="d1">Person</data>
+  <data key="d2">doc_006</data>
+</node>
+<node id="Menlo Park">
+  <data key="d0">Menlo Park</data>
+  <data key="d1">Location</data>
+  <data key="d2">doc_006</data>
+</node>
+<node id="GitHub Copilot">
+  <data key="d0">GitHub Copilot</data>
+  <data key="d1">Product</data>
+  <data key="d2">doc_002</data>
+</node>
+<node id="Satya Nadella">
+  <data key="d0">Satya Nadella</data>
+  <data key="d1">Person</data>
+  <data key="d2">doc_002</data>
+</node>
+<node id="Redmond">
+  <data key="d0">Redmond</data>
+  <data key="d1">Location</data>
+  <data key="d2">doc_002</data>
+</node>
+<node id="cloud computing">
+  <data key="d0">cloud computing</data>
+  <data key="d1">Sector</data>
+  <data key="d2">doc_002</data>
+</node>
+<node id="Nvidia">
+  <data key="d0">Nvidia</data>
+  <data key="d1">Company</data>
+  <data key="d2">doc_004</data>
+</node>
+<node id="CUDA">
+  <data key="d0">CUDA</data>
+  <data key="d1">Product</data>
+  <data key="d2">doc_004</data>
+</node>
+<node id="GPUs">
+  <data key="d0">GPUs</data>
+  <data key="d1">Product</data>
+  <data key="d2">doc_004</data>
+</node>
+<node id="Jensen Huang">
+  <data key="d0">Jensen Huang</data>
+  <data key="d1">Person</data>
+  <data key="d2">doc_004</data>
+</node>
+<node id="Santa Clara">
+  <data key="d0">Santa Clara</data>
+  <data key="d1">Location</data>
+  <data key="d2">doc_004</data>
+</node>
+<node id="ChatGPT">
+  <data key="d0">ChatGPT</data>
+  <data key="d1">Product</data>
+  <data key="d2">doc_001</data>
+</node>
+<node id="GPT models">
+  <data key="d0">GPT models</data>
+  <data key="d1">Product</data>
+  <data key="d2">doc_001</data>
+</node>
+<node id="Elon Musk">
+  <data key="d0">Elon Musk</data>
+  <data key="d1">Person</data>
+  <data key="d2">doc_001,doc_008</data>
+</node>
+<node id="Greg Brockman">
+  <data key="d0">Greg Brockman</data>
+  <data key="d1">Person</data>
+  <data key="d2">doc_001</data>
+</node>
+<node id="Sam Altman">
+  <data key="d0">Sam Altman</data>
+  <data key="d1">Person</data>
+  <data key="d2">doc_001</data>
+</node>
+<node id="2015">
+  <data key="d0">2015</data>
+  <data key="d1">Year</data>
+  <data key="d2">doc_001</data>
+</node>
+<node id="Tesla">
+  <data key="d0">Tesla</data>
+  <data key="d1">Company</data>
+  <data key="d2">doc_008</data>
+</node>
+<node id="Austin">
+  <data key="d0">Austin</data>
+  <data key="d1">Location</data>
+  <data key="d2">doc_008</data>
+</node>
+<node id="xAI">
+  <data key="d0">xAI</data>
+  <data key="d1">Company</data>
+  <data key="d2">doc_008</data>
+</node>
+<node id="Grok">
+  <data key="d0">Grok</data>
+  <data key="d1">Product</data>
+  <data key="d2">doc_008</data>
+</node>
+<edge source="AWS" target="Azure" id="COMPETES_WITH">
+  <data key="d3">COMPETES_WITH</data>
+  <data key="d4">doc_005</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="AWS" target="Google Cloud" id="COMPETES_WITH">
+  <data key="d3">COMPETES_WITH</data>
+  <data key="d4">doc_005</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="AWS" target="Nvidia" id="PARTNERS_WITH">
+  <data key="d3">PARTNERS_WITH</data>
+  <data key="d4">doc_004</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Azure" target="AWS" id="COMPETES_WITH">
+  <data key="d3">COMPETES_WITH</data>
+  <data key="d4">doc_005</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Azure" target="Nvidia" id="PARTNERS_WITH">
+  <data key="d3">PARTNERS_WITH</data>
+  <data key="d4">doc_004</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Google Cloud" target="AWS" id="COMPETES_WITH">
+  <data key="d3">COMPETES_WITH</data>
+  <data key="d4">doc_005</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Google Cloud" target="Nvidia" id="PARTNERS_WITH">
+  <data key="d3">PARTNERS_WITH</data>
+  <data key="d4">doc_004</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Alphabet" target="Sundar Pichai" id="HAS_CEO">
+  <data key="d3">HAS_CEO</data>
+  <data key="d4">doc_003</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Alphabet" target="Google" id="PARENT_OF">
+  <data key="d3">PARENT_OF</data>
+  <data key="d4">doc_003</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Google" target="Apple" id="COMPETES_WITH">
+  <data key="d3">COMPETES_WITH</data>
+  <data key="d4">doc_007</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Google" target="Microsoft" id="COMPETES_WITH">
+  <data key="d3">COMPETES_WITH</data>
+  <data key="d4">doc_003</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Google" target="OpenAI" id="COMPETES_WITH">
+  <data key="d3">COMPETES_WITH</data>
+  <data key="d4">doc_003</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Google" target="Android" id="DEVELOPS">
+  <data key="d3">DEVELOPS</data>
+  <data key="d4">doc_003</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Google" target="Gemini" id="DEVELOPS">
+  <data key="d3">DEVELOPS</data>
+  <data key="d4">doc_003</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Google" target="Google Cloud" id="DEVELOPS">
+  <data key="d3">DEVELOPS</data>
+  <data key="d4">doc_003</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Google" target="Google Search" id="DEVELOPS">
+  <data key="d3">DEVELOPS</data>
+  <data key="d4">doc_003</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Google" target="Larry Page" id="FOUNDED_BY">
+  <data key="d3">FOUNDED_BY</data>
+  <data key="d4">doc_003</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Google" target="Sergey Brin" id="FOUNDED_BY">
+  <data key="d3">FOUNDED_BY</data>
+  <data key="d4">doc_003</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Google" target="1998" id="FOUNDED_IN">
+  <data key="d3">FOUNDED_IN</data>
+  <data key="d4">doc_003</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Google" target="Sundar Pichai" id="HAS_CEO">
+  <data key="d3">HAS_CEO</data>
+  <data key="d4">doc_003</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Google" target="Mountain View" id="HEADQUARTERED_IN">
+  <data key="d3">HEADQUARTERED_IN</data>
+  <data key="d4">doc_003</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Google" target="Anthropic" id="INVESTS_IN">
+  <data key="d3">INVESTS_IN</data>
+  <data key="d4">doc_009</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Google" target="xAI" id="COMPETES_WITH">
+  <data key="d3">COMPETES_WITH</data>
+  <data key="d4">doc_008</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Amazon" target="Alexa" id="DEVELOPS">
+  <data key="d3">DEVELOPS</data>
+  <data key="d4">doc_005</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Amazon" target="Andy Jassy" id="HAS_CEO">
+  <data key="d3">HAS_CEO</data>
+  <data key="d4">doc_005</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Amazon" target="Seattle" id="HEADQUARTERED_IN">
+  <data key="d3">HEADQUARTERED_IN</data>
+  <data key="d4">doc_005</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Amazon" target="Anthropic" id="INVESTS_IN">
+  <data key="d3">INVESTS_IN</data>
+  <data key="d4">doc_009</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Amazon" target="AWS" id="OPERATES">
+  <data key="d3">OPERATES</data>
+  <data key="d4">doc_005</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Anthropic" target="OpenAI" id="COMPETES_WITH">
+  <data key="d3">COMPETES_WITH</data>
+  <data key="d4">doc_009</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Anthropic" target="Claude" id="DEVELOPS">
+  <data key="d3">DEVELOPS</data>
+  <data key="d4">doc_009</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Anthropic" target="Daniela Amodei" id="FOUNDED_BY">
+  <data key="d3">FOUNDED_BY</data>
+  <data key="d4">doc_009</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Anthropic" target="Dario Amodei" id="FOUNDED_BY">
+  <data key="d3">FOUNDED_BY</data>
+  <data key="d4">doc_009</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Anthropic" target="San Francisco" id="HEADQUARTERED_IN">
+  <data key="d3">HEADQUARTERED_IN</data>
+  <data key="d4">doc_009</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Anthropic" target="xAI" id="COMPETES_WITH">
+  <data key="d3">COMPETES_WITH</data>
+  <data key="d4">doc_008</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="OpenAI" target="Anthropic" id="COMPETES_WITH">
+  <data key="d3">COMPETES_WITH</data>
+  <data key="d4">doc_009</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="OpenAI" target="Google" id="COMPETES_WITH">
+  <data key="d3">COMPETES_WITH</data>
+  <data key="d4">doc_003</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="OpenAI" target="Meta" id="COMPETES_WITH">
+  <data key="d3">COMPETES_WITH</data>
+  <data key="d4">doc_006</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="OpenAI" target="Microsoft" id="PARTNERS_WITH">
+  <data key="d3">PARTNERS_WITH</data>
+  <data key="d4">doc_001</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="OpenAI" target="ChatGPT" id="DEVELOPS">
+  <data key="d3">DEVELOPS</data>
+  <data key="d4">doc_001</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="OpenAI" target="GPT models" id="DEVELOPS">
+  <data key="d3">DEVELOPS</data>
+  <data key="d4">doc_001</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="OpenAI" target="Elon Musk" id="FOUNDED_BY">
+  <data key="d3">FOUNDED_BY</data>
+  <data key="d4">doc_001</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="OpenAI" target="Greg Brockman" id="FOUNDED_BY">
+  <data key="d3">FOUNDED_BY</data>
+  <data key="d4">doc_001</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="OpenAI" target="Sam Altman" id="FOUNDED_BY">
+  <data key="d3">FOUNDED_BY</data>
+  <data key="d4">doc_001</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="OpenAI" target="2015" id="FOUNDED_IN">
+  <data key="d3">FOUNDED_IN</data>
+  <data key="d4">doc_001</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="OpenAI" target="San Francisco" id="HEADQUARTERED_IN">
+  <data key="d3">HEADQUARTERED_IN</data>
+  <data key="d4">doc_001</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="OpenAI" target="xAI" id="COMPETES_WITH">
+  <data key="d3">COMPETES_WITH</data>
+  <data key="d4">doc_008</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Apple" target="Google" id="COMPETES_WITH">
+  <data key="d3">COMPETES_WITH</data>
+  <data key="d4">doc_007</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Apple" target="iOS" id="DEVELOPS">
+  <data key="d3">DEVELOPS</data>
+  <data key="d4">doc_007</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Apple" target="iPhone" id="DEVELOPS">
+  <data key="d3">DEVELOPS</data>
+  <data key="d4">doc_007</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Apple" target="macOS" id="DEVELOPS">
+  <data key="d3">DEVELOPS</data>
+  <data key="d4">doc_007</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Apple" target="Steve Jobs" id="FOUNDED_BY">
+  <data key="d3">FOUNDED_BY</data>
+  <data key="d4">doc_007</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Apple" target="Steve Wozniak" id="FOUNDED_BY">
+  <data key="d3">FOUNDED_BY</data>
+  <data key="d4">doc_007</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Apple" target="1976" id="FOUNDED_IN">
+  <data key="d3">FOUNDED_IN</data>
+  <data key="d4">doc_007</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Apple" target="Tim Cook" id="HAS_CEO">
+  <data key="d3">HAS_CEO</data>
+  <data key="d4">doc_007</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Apple" target="Cupertino" id="HEADQUARTERED_IN">
+  <data key="d3">HEADQUARTERED_IN</data>
+  <data key="d4">doc_007</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Microsoft" target="Google" id="COMPETES_WITH">
+  <data key="d3">COMPETES_WITH</data>
+  <data key="d4">doc_003</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Microsoft" target="Azure" id="DEVELOPS">
+  <data key="d3">DEVELOPS</data>
+  <data key="d4">doc_002</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Microsoft" target="GitHub Copilot" id="DEVELOPS">
+  <data key="d3">DEVELOPS</data>
+  <data key="d4">doc_002</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Microsoft" target="Satya Nadella" id="HAS_CEO">
+  <data key="d3">HAS_CEO</data>
+  <data key="d4">doc_002</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Microsoft" target="Redmond" id="HEADQUARTERED_IN">
+  <data key="d3">HEADQUARTERED_IN</data>
+  <data key="d4">doc_002</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Microsoft" target="OpenAI" id="INVESTS_IN">
+  <data key="d3">INVESTS_IN</data>
+  <data key="d4">doc_001</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Microsoft" target="OpenAI" id="PARTNERS_WITH">
+  <data key="d3">PARTNERS_WITH</data>
+  <data key="d4">doc_001</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Microsoft" target="artificial intelligence" id="OPERATES_IN">
+  <data key="d3">OPERATES_IN</data>
+  <data key="d4">doc_002</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Microsoft" target="cloud computing" id="OPERATES_IN">
+  <data key="d3">OPERATES_IN</data>
+  <data key="d4">doc_002</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="IBM" target="Red Hat" id="ACQUIRED">
+  <data key="d3">ACQUIRED</data>
+  <data key="d4">doc_010</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="IBM" target="2019" id="ACQUIRED_IN">
+  <data key="d3">ACQUIRED_IN</data>
+  <data key="d4">doc_010</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="IBM" target="Red Hat OpenShift" id="DEVELOPS">
+  <data key="d3">DEVELOPS</data>
+  <data key="d4">doc_010</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="IBM" target="Watson" id="DEVELOPS">
+  <data key="d3">DEVELOPS</data>
+  <data key="d4">doc_010</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="IBM" target="Arvind Krishna" id="HAS_CEO">
+  <data key="d3">HAS_CEO</data>
+  <data key="d4">doc_010</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="IBM" target="Armonk" id="HEADQUARTERED_IN">
+  <data key="d3">HEADQUARTERED_IN</data>
+  <data key="d4">doc_010</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="IBM" target="artificial intelligence" id="OPERATES_IN">
+  <data key="d3">OPERATES_IN</data>
+  <data key="d4">doc_010</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="IBM" target="hybrid cloud" id="OPERATES_IN">
+  <data key="d3">OPERATES_IN</data>
+  <data key="d4">doc_010</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Meta" target="OpenAI" id="COMPETES_WITH">
+  <data key="d3">COMPETES_WITH</data>
+  <data key="d4">doc_006</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Meta" target="Instagram" id="DEVELOPS">
+  <data key="d3">DEVELOPS</data>
+  <data key="d4">doc_006</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Meta" target="Llama" id="DEVELOPS">
+  <data key="d3">DEVELOPS</data>
+  <data key="d4">doc_006</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Meta" target="WhatsApp" id="DEVELOPS">
+  <data key="d3">DEVELOPS</data>
+  <data key="d4">doc_006</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Meta" target="Mark Zuckerberg" id="FOUNDED_BY">
+  <data key="d3">FOUNDED_BY</data>
+  <data key="d4">doc_006</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Meta" target="Mark Zuckerberg" id="HAS_CEO">
+  <data key="d3">HAS_CEO</data>
+  <data key="d4">doc_006</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Meta" target="Menlo Park" id="HEADQUARTERED_IN">
+  <data key="d3">HEADQUARTERED_IN</data>
+  <data key="d4">doc_006</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Nvidia" target="CUDA" id="DEVELOPS">
+  <data key="d3">DEVELOPS</data>
+  <data key="d4">doc_004</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Nvidia" target="GPUs" id="DEVELOPS">
+  <data key="d3">DEVELOPS</data>
+  <data key="d4">doc_004</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Nvidia" target="Jensen Huang" id="FOUNDED_BY">
+  <data key="d3">FOUNDED_BY</data>
+  <data key="d4">doc_004</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Nvidia" target="Jensen Huang" id="HAS_CEO">
+  <data key="d3">HAS_CEO</data>
+  <data key="d4">doc_004</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Nvidia" target="Santa Clara" id="HEADQUARTERED_IN">
+  <data key="d3">HEADQUARTERED_IN</data>
+  <data key="d4">doc_004</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Nvidia" target="AWS" id="PARTNERS_WITH">
+  <data key="d3">PARTNERS_WITH</data>
+  <data key="d4">doc_004</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Nvidia" target="Azure" id="PARTNERS_WITH">
+  <data key="d3">PARTNERS_WITH</data>
+  <data key="d4">doc_004</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Nvidia" target="Google Cloud" id="PARTNERS_WITH">
+  <data key="d3">PARTNERS_WITH</data>
+  <data key="d4">doc_004</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Tesla" target="Elon Musk" id="HAS_CEO">
+  <data key="d3">HAS_CEO</data>
+  <data key="d4">doc_008</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="Tesla" target="Austin" id="HEADQUARTERED_IN">
+  <data key="d3">HEADQUARTERED_IN</data>
+  <data key="d4">doc_008</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="xAI" target="Anthropic" id="COMPETES_WITH">
+  <data key="d3">COMPETES_WITH</data>
+  <data key="d4">doc_008</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="xAI" target="Google" id="COMPETES_WITH">
+  <data key="d3">COMPETES_WITH</data>
+  <data key="d4">doc_008</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="xAI" target="OpenAI" id="COMPETES_WITH">
+  <data key="d3">COMPETES_WITH</data>
+  <data key="d4">doc_008</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="xAI" target="Grok" id="DEVELOPS">
+  <data key="d3">DEVELOPS</data>
+  <data key="d4">doc_008</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="xAI" target="Elon Musk" id="FOUNDED_BY">
+  <data key="d3">FOUNDED_BY</data>
+  <data key="d4">doc_008</data>
+  <data key="d5">1.0</data>
+  <data key="d6">1</data>
+</edge>
+</graph></graphml>

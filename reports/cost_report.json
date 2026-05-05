@@ -1,0 +1,19 @@
+{
+  "elapsed_seconds": 2.194,
+  "triple_extraction": {
+    "mode": "seed",
+    "used": true,
+    "num_triples": 81
+  },
+  "flat_rag_generation": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0
+  },
+  "graphrag_generation": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0
+  },
+  "note": "Token counts are zero when running in offline fallback mode without OPENAI_API_KEY."
+}
