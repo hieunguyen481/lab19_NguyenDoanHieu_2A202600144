@@ -3,9 +3,9 @@ matplotlib>=3.8
 openai>=1.0.0
 python-dotenv>=1.0.0
 pandas>=2.0
+neo4j>=5.0
 
 # Optional upgrades:
-# neo4j>=5.0
 # noderag
 # rank-bm25
 # langchain

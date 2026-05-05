@@ -1,11 +1,11 @@
 {
   "summary": {
     "num_questions": 20,
-    "flat_avg_score": 0.903,
-    "graphrag_avg_score": 1.0,
-    "flat_wins": 0,
-    "graph_wins": 11,
-    "ties": 9
+    "flat_avg_score": 0.861,
+    "graphrag_avg_score": 0.967,
+    "flat_wins": 2,
+    "graph_wins": 13,
+    "ties": 5
   },
   "rows": [
     {
@@ -13,11 +13,11 @@
       "question": "Công ty nào do Sam Altman đồng sáng lập phát triển ChatGPT?",
       "ground_truth": "OpenAI là công ty do Sam Altman đồng sáng lập và phát triển ChatGPT.",
       "flat_answer": "OpenAI is an artificial intelligence company headquartered in San Francisco. OpenAI was founded in 2015 by Sam Altman, Elon Musk, Greg Brockman, Ilya Sutskever, John Schulman, and Wojciech Zaremba. OpenAI develops ChatGPT and GPT models. Microsoft is a major partner and investor in OpenAI through Azure cloud infrastructure.",
-      "graphrag_answer": "Dựa trên graph context: OpenAI DEVELOPS ChatGPT; OpenAI DEVELOPS GPT models.",
+      "graphrag_answer": "Dựa trên graph context: OpenAI DEVELOPS ChatGPT; OpenAI FOUNDED_BY Sam Altman; OpenAI DEVELOPS GPT models; OpenAI FOUNDED_BY Elon Musk; OpenAI FOUNDED_BY Greg Brockman; OpenAI FOUNDED_IN 2015.",
       "flat_score": {
-        "score": 0.85,
-        "entity_score": 1.0,
-        "relation_score": 0.5,
+        "score": 0.9,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 0.5,
         "entity_hits": [
           "Sam Altman",
           "OpenAI",
@@ -29,8 +29,8 @@
       },
       "graphrag_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "Sam Altman",
           "OpenAI",
@@ -52,11 +52,11 @@
       "question": "Công ty mẹ của Google là công ty nào và CEO là ai?",
       "ground_truth": "Alphabet là công ty mẹ của Google, và Sundar Pichai là CEO của Alphabet.",
       "flat_answer": "Google is a technology company headquartered in Mountain View. Google was founded in 1998 by Larry Page and Sergey Brin. Alphabet is the parent company of Google. Sundar Pichai is the CEO of Alphabet and Google. Google develops Gemini, Google Search, Android, and Google Cloud. Google competes with Microsoft and OpenAI in artificial intelligence.",
-      "graphrag_answer": "Dựa trên graph context: Google HAS_CEO Sundar Pichai; Apple HAS_CEO Tim Cook; Microsoft HAS_CEO Satya Nadella; Alphabet HAS_CEO Sundar Pichai.",
+      "graphrag_answer": "Dựa trên graph context: Google HAS_CEO Sundar Pichai; Alphabet PARENT_OF Google; Apple HAS_CEO Tim Cook; Microsoft HAS_CEO Satya Nadella; Alphabet HAS_CEO Sundar Pichai.",
       "flat_score": {
-        "score": 0.7,
-        "entity_score": 1.0,
-        "relation_score": 0.0,
+        "score": 0.8,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 0.0,
         "entity_hits": [
           "Google",
           "Alphabet",
@@ -66,8 +66,8 @@
       },
       "graphrag_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "Google",
           "Alphabet",
@@ -90,14 +90,11 @@
       "flat_answer": "OpenAI is an artificial intelligence company headquartered in San Francisco. OpenAI was founded in 2015 by Sam Altman, Elon Musk, Greg Brockman, Ilya Sutskever, John Schulman, and Wojciech Zaremba. OpenAI develops ChatGPT and GPT models. Microsoft is a major partner and investor in OpenAI through Azure cloud infrastructure.",
       "graphrag_answer": "Dựa trên graph context: OpenAI COMPETES_WITH Anthropic; OpenAI COMPETES_WITH Google; OpenAI COMPETES_WITH Meta; OpenAI COMPETES_WITH xAI; Anthropic COMPETES_WITH OpenAI; Google COMPETES_WITH OpenAI; Meta COMPETES_WITH OpenAI; xAI COMPETES_WITH OpenAI; Anthropic COMPETES_WITH xAI; xAI COMPETES_WITH Anthropic.",
       "flat_score": {
-        "score": 0.86,
-        "entity_score": 0.8,
-        "relation_score": 1.0,
+        "score": 0.36,
+        "answer_entity_score": 0.2,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
-          "OpenAI",
-          "Google",
-          "xAI",
-          "Anthropic"
+          "OpenAI"
         ],
         "relation_hits": [
           "COMPETES_WITH"
@@ -105,8 +102,8 @@
       },
       "graphrag_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "OpenAI",
           "Google",
@@ -131,8 +128,8 @@
       "graphrag_answer": "Dựa trên graph context: Microsoft COMPETES_WITH Google; Microsoft DEVELOPS Azure; Microsoft DEVELOPS GitHub Copilot; Microsoft HAS_CEO Satya Nadella; Microsoft HEADQUARTERED_IN Redmond; Microsoft INVESTS_IN OpenAI; Microsoft PARTNERS_WITH OpenAI; Microsoft OPERATES_IN artificial intelligence.",
       "flat_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "Microsoft",
           "OpenAI",
@@ -145,8 +142,8 @@
       },
       "graphrag_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "Microsoft",
           "OpenAI",
@@ -167,11 +164,11 @@
       "question": "CEO của Nvidia là ai và Nvidia phát triển nền tảng nào cho AI computing?",
       "ground_truth": "Jensen Huang là CEO của Nvidia; Nvidia phát triển GPUs, CUDA và AI computing platforms.",
       "flat_answer": "Nvidia is a semiconductor and artificial intelligence computing company headquartered in Santa Clara. Jensen Huang is the CEO and co-founder of Nvidia. Nvidia develops GPUs, CUDA, and AI computing platforms. Nvidia partners with cloud providers such as Microsoft Azure, Google Cloud, and Amazon Web Services.",
-      "graphrag_answer": "Dựa trên graph context: Nvidia HAS_CEO Jensen Huang.",
+      "graphrag_answer": "Dựa trên graph context: Nvidia DEVELOPS CUDA; Nvidia DEVELOPS GPUs; Nvidia HAS_CEO Jensen Huang; Microsoft DEVELOPS Azure; Google DEVELOPS Google Cloud.",
       "flat_score": {
-        "score": 0.85,
-        "entity_score": 1.0,
-        "relation_score": 0.5,
+        "score": 0.9,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 0.5,
         "entity_hits": [
           "Nvidia",
           "Jensen Huang",
@@ -183,8 +180,8 @@
       },
       "graphrag_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "Nvidia",
           "Jensen Huang",
@@ -208,8 +205,8 @@
       "graphrag_answer": "Dựa trên graph context: AWS COMPETES_WITH Azure; AWS COMPETES_WITH Google Cloud; Azure COMPETES_WITH AWS; Google Cloud COMPETES_WITH AWS.",
       "flat_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "AWS",
           "Microsoft Azure",
@@ -221,8 +218,8 @@
       },
       "graphrag_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "AWS",
           "Microsoft Azure",
@@ -242,14 +239,12 @@
       "question": "Công ty nào phát triển Claude và được Amazon cùng Google đầu tư?",
       "ground_truth": "Anthropic phát triển Claude và được Amazon cùng Google đầu tư.",
       "flat_answer": "Amazon is a technology and e-commerce company headquartered in Seattle. Andy Jassy is the CEO of Amazon. Amazon operates Amazon Web Services, also called AWS, which provides cloud computing infrastructure. AWS competes with Microsoft Azure and Google Cloud. Amazon develops Alexa as an AI assistant.",
-      "graphrag_answer": "Dựa trên graph context: Google DEVELOPS Android; Google DEVELOPS Gemini; Google DEVELOPS Google Cloud; Google DEVELOPS Google Search; Amazon DEVELOPS Alexa; Anthropic DEVELOPS Claude; Apple DEVELOPS iOS; Apple DEVELOPS iPhone; Apple DEVELOPS macOS; Microsoft DEVELOPS Azure.",
+      "graphrag_answer": "Dựa trên graph context: Google DEVELOPS Android; Google DEVELOPS Gemini; Google DEVELOPS Google Cloud; Google DEVELOPS Google Search; Google INVESTS_IN Anthropic; Amazon DEVELOPS Alexa; Amazon INVESTS_IN Anthropic; Anthropic DEVELOPS Claude; Apple DEVELOPS iOS; Apple DEVELOPS iPhone.",
       "flat_score": {
-        "score": 0.85,
-        "entity_score": 1.0,
-        "relation_score": 0.5,
+        "score": 0.5,
+        "answer_entity_score": 0.5,
+        "evidence_relation_score": 0.5,
         "entity_hits": [
-          "Anthropic",
-          "Claude",
           "Amazon",
           "Google"
         ],
@@ -259,8 +254,8 @@
       },
       "graphrag_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "Anthropic",
           "Claude",
@@ -286,9 +281,9 @@
       "flat_answer": "Tesla is an electric vehicle and clean energy company headquartered in Austin. Elon Musk is the CEO of Tesla. xAI is an artificial intelligence company founded by Elon Musk. xAI develops Grok. xAI competes with OpenAI, Google, and Anthropic in AI assistants.",
       "graphrag_answer": "Dựa trên graph context: OpenAI FOUNDED_BY Elon Musk; Tesla HAS_CEO Elon Musk; xAI FOUNDED_BY Elon Musk; OpenAI COMPETES_WITH Anthropic; OpenAI COMPETES_WITH Google; OpenAI COMPETES_WITH Meta; OpenAI PARTNERS_WITH Microsoft; OpenAI DEVELOPS ChatGPT.",
       "flat_score": {
-        "score": 0.85,
-        "entity_score": 1.0,
-        "relation_score": 0.5,
+        "score": 0.9,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 0.5,
         "entity_hits": [
           "Elon Musk",
           "OpenAI",
@@ -301,8 +296,8 @@
       },
       "graphrag_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "Elon Musk",
           "OpenAI",
@@ -327,8 +322,8 @@
       "graphrag_answer": "Dựa trên graph context: Google DEVELOPS Android; Google DEVELOPS Gemini; Google DEVELOPS Google Cloud; Google DEVELOPS Google Search; Apple DEVELOPS iOS; Apple DEVELOPS iPhone; Apple DEVELOPS macOS; Microsoft DEVELOPS Azure; Microsoft DEVELOPS GitHub Copilot; OpenAI DEVELOPS ChatGPT.",
       "flat_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "Google",
           "Gemini",
@@ -342,8 +337,8 @@
       },
       "graphrag_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "Google",
           "Gemini",
@@ -368,8 +363,8 @@
       "graphrag_answer": "Dựa trên graph context: Google COMPETES_WITH Apple; Google COMPETES_WITH Microsoft; Google COMPETES_WITH OpenAI; Google COMPETES_WITH xAI; Apple COMPETES_WITH Google; Microsoft COMPETES_WITH Google; OpenAI COMPETES_WITH Google; xAI COMPETES_WITH Google; OpenAI COMPETES_WITH Anthropic; OpenAI COMPETES_WITH Meta.",
       "flat_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "Apple",
           "Google",
@@ -382,21 +377,19 @@
         ]
       },
       "graphrag_score": {
-        "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "score": 0.6,
+        "answer_entity_score": 0.5,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "Apple",
-          "Google",
-          "iOS",
-          "Android"
+          "Google"
         ],
         "relation_hits": [
           "COMPETES_WITH",
           "DEVELOPS"
         ]
       },
-      "winner": "Tie",
+      "winner": "Flat RAG",
       "graph_entities": [
         "Google",
         "Apple"
@@ -410,8 +403,8 @@
       "graphrag_answer": "Dựa trên graph context: Meta DEVELOPS Llama; Meta DEVELOPS Instagram; Meta DEVELOPS WhatsApp.",
       "flat_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "Meta",
           "Llama"
@@ -422,8 +415,8 @@
       },
       "graphrag_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "Meta",
           "Llama"
@@ -442,11 +435,11 @@
       "question": "IBM đã mua công ty nào và vào năm nào?",
       "ground_truth": "IBM acquired Red Hat in 2019.",
       "flat_answer": "IBM is a technology company headquartered in Armonk. Arvind Krishna is the CEO of IBM. IBM develops Watson and Red Hat OpenShift. IBM operates in enterprise software, hybrid cloud, and artificial intelligence. IBM acquired Red Hat in 2019.",
-      "graphrag_answer": "Dựa trên graph context: IBM ACQUIRED Red Hat; IBM ACQUIRED_IN 2019; IBM DEVELOPS Red Hat OpenShift; IBM DEVELOPS Watson; IBM HAS_CEO Arvind Krishna; IBM HEADQUARTERED_IN Armonk; IBM OPERATES_IN artificial intelligence; IBM OPERATES_IN hybrid cloud.",
+      "graphrag_answer": "Dựa trên graph context: IBM ACQUIRED Red Hat; IBM ACQUIRED_IN 2019.",
       "flat_score": {
-        "score": 0.85,
-        "entity_score": 1.0,
-        "relation_score": 0.5,
+        "score": 0.9,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 0.5,
         "entity_hits": [
           "IBM",
           "Red Hat",
@@ -458,8 +451,8 @@
       },
       "graphrag_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "IBM",
           "Red Hat",
@@ -480,14 +473,13 @@
       "question": "Công ty nào phát triển Grok và cạnh tranh với Anthropic?",
       "ground_truth": "xAI phát triển Grok và cạnh tranh với Anthropic.",
       "flat_answer": "Anthropic is an artificial intelligence company headquartered in San Francisco. Anthropic was founded by Dario Amodei and Daniela Amodei. Anthropic develops Claude. Amazon and Google have invested in Anthropic. Anthropic competes with OpenAI and xAI in AI assistants.",
-      "graphrag_answer": "Dựa trên graph context: Anthropic DEVELOPS Claude; xAI DEVELOPS Grok; OpenAI DEVELOPS ChatGPT; OpenAI DEVELOPS GPT models; Amazon DEVELOPS Alexa; Google DEVELOPS Android; Google DEVELOPS Gemini; Google DEVELOPS Google Cloud; Google DEVELOPS Google Search.",
+      "graphrag_answer": "Dựa trên graph context: Anthropic COMPETES_WITH OpenAI; Anthropic DEVELOPS Claude; Anthropic COMPETES_WITH xAI; OpenAI COMPETES_WITH Anthropic; xAI COMPETES_WITH Anthropic; xAI DEVELOPS Grok; OpenAI COMPETES_WITH Google; OpenAI COMPETES_WITH Meta; OpenAI DEVELOPS ChatGPT; OpenAI DEVELOPS GPT models.",
       "flat_score": {
-        "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "score": 0.733,
+        "answer_entity_score": 0.667,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "xAI",
-          "Grok",
           "Anthropic"
         ],
         "relation_hits": [
@@ -497,8 +489,8 @@
       },
       "graphrag_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "xAI",
           "Grok",
@@ -509,7 +501,7 @@
           "DEVELOPS"
         ]
       },
-      "winner": "Tie",
+      "winner": "GraphRAG",
       "graph_entities": [
         "Anthropic",
         "Grok"
@@ -520,11 +512,11 @@
       "question": "Ai là CEO của Amazon và Amazon vận hành nền tảng cloud nào?",
       "ground_truth": "Andy Jassy là CEO của Amazon, và Amazon vận hành AWS.",
       "flat_answer": "Amazon is a technology and e-commerce company headquartered in Seattle. Andy Jassy is the CEO of Amazon. Amazon operates Amazon Web Services, also called AWS, which provides cloud computing infrastructure. AWS competes with Microsoft Azure and Google Cloud. Amazon develops Alexa as an AI assistant.",
-      "graphrag_answer": "Dựa trên graph context: Amazon HAS_CEO Andy Jassy.",
+      "graphrag_answer": "Dựa trên graph context: Amazon HAS_CEO Andy Jassy; Amazon OPERATES AWS.",
       "flat_score": {
-        "score": 0.85,
-        "entity_score": 1.0,
-        "relation_score": 0.5,
+        "score": 0.9,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 0.5,
         "entity_hits": [
           "Amazon",
           "Andy Jassy",
@@ -536,8 +528,8 @@
       },
       "graphrag_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "Amazon",
           "Andy Jassy",
@@ -560,12 +552,11 @@
       "flat_answer": "OpenAI is an artificial intelligence company headquartered in San Francisco. OpenAI was founded in 2015 by Sam Altman, Elon Musk, Greg Brockman, Ilya Sutskever, John Schulman, and Wojciech Zaremba. OpenAI develops ChatGPT and GPT models. Microsoft is a major partner and investor in OpenAI through Azure cloud infrastructure.",
       "graphrag_answer": "Dựa trên graph context: Anthropic HEADQUARTERED_IN San Francisco; OpenAI HEADQUARTERED_IN San Francisco.",
       "flat_score": {
-        "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "score": 0.733,
+        "answer_entity_score": 0.667,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "OpenAI",
-          "Anthropic",
           "San Francisco"
         ],
         "relation_hits": [
@@ -574,8 +565,8 @@
       },
       "graphrag_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "OpenAI",
           "Anthropic",
@@ -585,7 +576,7 @@
           "HEADQUARTERED_IN"
         ]
       },
-      "winner": "Tie",
+      "winner": "GraphRAG",
       "graph_entities": [
         "San Francisco"
       ]
@@ -595,11 +586,11 @@
       "question": "Satya Nadella là CEO của công ty nào và công ty đó phát triển sản phẩm AI nào?",
       "ground_truth": "Satya Nadella là CEO của Microsoft, công ty phát triển GitHub Copilot và hợp tác với OpenAI về AI.",
       "flat_answer": "Microsoft is a technology company headquartered in Redmond. Satya Nadella is the CEO of Microsoft. Microsoft operates in cloud computing, productivity software, gaming, and artificial intelligence. Microsoft develops Azure, Microsoft 365, GitHub Copilot, and Windows. Microsoft partners with OpenAI and uses Azure to host AI services.",
-      "graphrag_answer": "Dựa trên graph context: Microsoft HAS_CEO Satya Nadella.",
+      "graphrag_answer": "Dựa trên graph context: Microsoft HAS_CEO Satya Nadella; Microsoft DEVELOPS Azure; Microsoft DEVELOPS GitHub Copilot.",
       "flat_score": {
-        "score": 0.85,
-        "entity_score": 1.0,
-        "relation_score": 0.5,
+        "score": 0.9,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 0.5,
         "entity_hits": [
           "Satya Nadella",
           "Microsoft",
@@ -611,8 +602,8 @@
       },
       "graphrag_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "Satya Nadella",
           "Microsoft",
@@ -635,9 +626,9 @@
       "flat_answer": "Google is a technology company headquartered in Mountain View. Google was founded in 1998 by Larry Page and Sergey Brin. Alphabet is the parent company of Google. Sundar Pichai is the CEO of Alphabet and Google. Google develops Gemini, Google Search, Android, and Google Cloud. Google competes with Microsoft and OpenAI in artificial intelligence.",
       "graphrag_answer": "Dựa trên graph context: Google FOUNDED_BY Larry Page; Google FOUNDED_BY Sergey Brin; Google FOUNDED_IN 1998.",
       "flat_score": {
-        "score": 0.7,
-        "entity_score": 1.0,
-        "relation_score": 0.0,
+        "score": 0.8,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 0.0,
         "entity_hits": [
           "Larry Page",
           "Sergey Brin",
@@ -647,8 +638,8 @@
       },
       "graphrag_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "Larry Page",
           "Sergey Brin",
@@ -672,8 +663,8 @@
       "graphrag_answer": "Dựa trên graph context: Nvidia DEVELOPS CUDA; Nvidia DEVELOPS GPUs; Nvidia FOUNDED_BY Jensen Huang; Nvidia HAS_CEO Jensen Huang; Nvidia HEADQUARTERED_IN Santa Clara; Nvidia PARTNERS_WITH AWS; Nvidia PARTNERS_WITH Azure; Nvidia PARTNERS_WITH Google Cloud.",
       "flat_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "Nvidia",
           "Microsoft Azure",
@@ -686,8 +677,8 @@
       },
       "graphrag_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "Nvidia",
           "Microsoft Azure",
@@ -708,11 +699,11 @@
       "question": "Tim Cook là CEO của công ty nào và công ty đó phát triển hệ điều hành nào?",
       "ground_truth": "Tim Cook là CEO của Apple; Apple phát triển macOS và iOS.",
       "flat_answer": "Apple is a consumer technology company headquartered in Cupertino. Steve Jobs, Steve Wozniak, and Ronald Wayne founded Apple in 1976. Tim Cook is the CEO of Apple. Apple develops iPhone, macOS, iOS, and Apple Intelligence. Apple competes with Google in mobile operating systems through iOS and Android.",
-      "graphrag_answer": "Dựa trên graph context: Apple HAS_CEO Tim Cook.",
+      "graphrag_answer": "Dựa trên graph context: Apple HAS_CEO Tim Cook; Apple DEVELOPS iOS; Apple DEVELOPS iPhone; Apple DEVELOPS macOS.",
       "flat_score": {
-        "score": 0.85,
-        "entity_score": 1.0,
-        "relation_score": 0.5,
+        "score": 0.9,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 0.5,
         "entity_hits": [
           "Tim Cook",
           "Apple",
@@ -725,8 +716,8 @@
       },
       "graphrag_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "Tim Cook",
           "Apple",
@@ -751,8 +742,8 @@
       "graphrag_answer": "Dựa trên graph context: IBM DEVELOPS Watson; IBM DEVELOPS Red Hat OpenShift.",
       "flat_score": {
         "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "answer_entity_score": 1.0,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "IBM",
           "hybrid cloud",
@@ -764,12 +755,11 @@
         ]
       },
       "graphrag_score": {
-        "score": 1.0,
-        "entity_score": 1.0,
-        "relation_score": 1.0,
+        "score": 0.733,
+        "answer_entity_score": 0.667,
+        "evidence_relation_score": 1.0,
         "entity_hits": [
           "IBM",
-          "hybrid cloud",
           "Watson"
         ],
         "relation_hits": [
@@ -777,7 +767,7 @@
           "OPERATES_IN"
         ]
       },
-      "winner": "Tie",
+      "winner": "Flat RAG",
       "graph_entities": [
         "Watson",
         "hybrid cloud"

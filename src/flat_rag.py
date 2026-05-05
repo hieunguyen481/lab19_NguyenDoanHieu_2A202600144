@@ -72,20 +72,23 @@ def generate_flat_answer(question: str, contexts: list[str]) -> tuple[str, dict]
     client = OpenAI()
     model = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
     context_text = "\n\n".join(contexts)
-    response = client.chat.completions.create(
-        model=model,
-        temperature=0,
-        messages=[
-            {
-                "role": "system",
-                "content": (
-                    "Bạn là trợ lý Flat RAG. Chỉ dùng context được cung cấp. "
-                    "Nếu context thiếu bằng chứng, nói không tìm thấy thông tin."
-                ),
-            },
-            {"role": "user", "content": f"Context:\n{context_text}\n\nCâu hỏi: {question}"},
-        ],
-    )
+    try:
+        response = client.chat.completions.create(
+            model=model,
+            temperature=0,
+            messages=[
+                {
+                    "role": "system",
+                    "content": (
+                        "Bạn là trợ lý Flat RAG. Chỉ dùng context được cung cấp. "
+                        "Nếu context thiếu bằng chứng, nói không tìm thấy thông tin."
+                    ),
+                },
+                {"role": "user", "content": f"Context:\n{context_text}\n\nCâu hỏi: {question}"},
+            ],
+        )
+    except Exception as exc:
+        return contexts[0], {"used_llm": False, "error": f"{type(exc).__name__}: {exc}"}
     usage = response.usage
     return response.choices[0].message.content or "", {
         "used_llm": True,

@@ -19,19 +19,19 @@ Pipeline gồm các bước: load corpus, chunk documents, extract triples, dedu
 ## 4. Kết quả benchmark
 
 - Số câu hỏi: 20
-- Flat RAG average score: 0.903
-- GraphRAG average score: 1.0
-- GraphRAG thắng: 11
-- Flat RAG thắng: 0
-- Hòa: 9
+- Flat RAG average score: 0.861
+- GraphRAG average score: 0.967
+- GraphRAG thắng: 13
+- Flat RAG thắng: 2
+- Hòa: 5
 
 ## 5. Một số case GraphRAG tốt hơn
 
-- `q01`: Công ty nào do Sam Altman đồng sáng lập phát triển ChatGPT? (Flat=0.85, GraphRAG=1.0)
-- `q02`: Công ty mẹ của Google là công ty nào và CEO là ai? (Flat=0.7, GraphRAG=1.0)
-- `q03`: Những công ty nào cạnh tranh với OpenAI trong mảng AI assistant? (Flat=0.86, GraphRAG=1.0)
-- `q05`: CEO của Nvidia là ai và Nvidia phát triển nền tảng nào cho AI computing? (Flat=0.85, GraphRAG=1.0)
-- `q07`: Công ty nào phát triển Claude và được Amazon cùng Google đầu tư? (Flat=0.85, GraphRAG=1.0)
+- `q01`: Công ty nào do Sam Altman đồng sáng lập phát triển ChatGPT? (Flat=0.9, GraphRAG=1.0)
+- `q02`: Công ty mẹ của Google là công ty nào và CEO là ai? (Flat=0.8, GraphRAG=1.0)
+- `q03`: Những công ty nào cạnh tranh với OpenAI trong mảng AI assistant? (Flat=0.36, GraphRAG=1.0)
+- `q05`: CEO của Nvidia là ai và Nvidia phát triển nền tảng nào cho AI computing? (Flat=0.9, GraphRAG=1.0)
+- `q07`: Công ty nào phát triển Claude và được Amazon cùng Google đầu tư? (Flat=0.5, GraphRAG=1.0)
 
 ## 6. Nhận xét
 

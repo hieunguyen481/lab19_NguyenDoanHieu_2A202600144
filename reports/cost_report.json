@@ -1,5 +1,5 @@
 {
-  "elapsed_seconds": 2.194,
+  "elapsed_seconds": 0.913,
   "triple_extraction": {
     "mode": "seed",
     "used": true,
@@ -15,5 +15,7 @@
     "completion_tokens": 0,
     "total_tokens": 0
   },
-  "note": "Token counts are zero when running in offline fallback mode without OPENAI_API_KEY."
+  "flat_rag_api_errors": 0,
+  "graphrag_api_errors": 0,
+  "note": "Token counts are zero when USE_OPENAI_GENERATION=0, OPENAI_API_KEY is missing, or the OpenAI call falls back after an API/network error."
 }

@@ -18,4 +18,7 @@ def load_environment() -> None:
 
 def openai_enabled() -> bool:
     """Return True when an OpenAI API key is configured."""
-    return bool(os.getenv("OPENAI_API_KEY"))
+    if os.getenv("USE_OPENAI_GENERATION", "0") != "1":
+        return False
+    key = os.getenv("OPENAI_API_KEY", "").strip()
+    return bool(key and key != "your_openai_api_key_here")

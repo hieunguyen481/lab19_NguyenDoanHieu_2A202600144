@@ -33,15 +33,15 @@ def contains_any(text: str, item: str) -> bool:
 
 
 def score_answer(answer: str, required_entities: list[str], required_relations: list[str], evidence: str = "") -> dict:
-    entity_hits = [entity for entity in required_entities if contains_any(answer + "\n" + evidence, entity)]
+    entity_hits = [entity for entity in required_entities if contains_any(answer, entity)]
     relation_hits = [relation for relation in required_relations if contains_any(evidence, relation)]
     entity_score = len(entity_hits) / len(required_entities) if required_entities else 1.0
     relation_score = len(set(relation_hits)) / len(set(required_relations)) if required_relations else 1.0
-    score = round((entity_score * 0.7) + (relation_score * 0.3), 3)
+    score = round((entity_score * 0.8) + (relation_score * 0.2), 3)
     return {
         "score": score,
-        "entity_score": round(entity_score, 3),
-        "relation_score": round(relation_score, 3),
+        "answer_entity_score": round(entity_score, 3),
+        "evidence_relation_score": round(relation_score, 3),
         "entity_hits": entity_hits,
         "relation_hits": sorted(set(relation_hits)),
     }
@@ -127,10 +127,18 @@ def summarize_cost(flat_outputs: list[dict], graph_outputs: list[dict], extracti
                 total[key] += int(usage.get(key, 0) or 0)
         return total
 
+    def error_count(outputs: list[dict]) -> int:
+        return sum(1 for output in outputs if output.get("usage", {}).get("error"))
+
     return {
         "elapsed_seconds": round(elapsed, 3),
         "triple_extraction": extraction_stats,
         "flat_rag_generation": usage_sum(flat_outputs),
         "graphrag_generation": usage_sum(graph_outputs),
-        "note": "Token counts are zero when running in offline fallback mode without OPENAI_API_KEY.",
+        "flat_rag_api_errors": error_count(flat_outputs),
+        "graphrag_api_errors": error_count(graph_outputs),
+        "note": (
+            "Token counts are zero when USE_OPENAI_GENERATION=0, OPENAI_API_KEY is missing, "
+            "or the OpenAI call falls back after an API/network error."
+        ),
     }

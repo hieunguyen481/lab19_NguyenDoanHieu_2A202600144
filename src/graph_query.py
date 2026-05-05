@@ -84,20 +84,27 @@ def fallback_answer(question: str, triples: list[dict]) -> str:
         return "Không tìm thấy thông tin trong knowledge graph."
 
     lower = question.lower()
+    desired_relations: set[str] = set()
     if "trụ sở" in lower or "headquarter" in lower:
-        selected = [t for t in triples if t["relation"] == "HEADQUARTERED_IN"]
-    elif "ceo" in lower:
-        selected = [t for t in triples if t["relation"] == "HAS_CEO"]
-    elif "phát triển" in lower or "develop" in lower:
-        selected = [t for t in triples if t["relation"] == "DEVELOPS"]
-    elif "cạnh tranh" in lower or "compete" in lower:
-        selected = [t for t in triples if t["relation"] == "COMPETES_WITH"]
-    elif "sáng lập" in lower or "founded" in lower:
-        selected = [t for t in triples if t["relation"] in {"FOUNDED_BY", "FOUNDED_IN"}]
-    elif "đầu tư" in lower or "invest" in lower:
-        selected = [t for t in triples if t["relation"] == "INVESTS_IN"]
-    else:
-        selected = triples[:8]
+        desired_relations.add("HEADQUARTERED_IN")
+    if "ceo" in lower:
+        desired_relations.add("HAS_CEO")
+    if "công ty mẹ" in lower or "parent" in lower:
+        desired_relations.add("PARENT_OF")
+    if "phát triển" in lower or "develop" in lower:
+        desired_relations.add("DEVELOPS")
+    if "cạnh tranh" in lower or "compete" in lower:
+        desired_relations.add("COMPETES_WITH")
+    if "sáng lập" in lower or "founded" in lower:
+        desired_relations.update({"FOUNDED_BY", "FOUNDED_IN"})
+    if "đầu tư" in lower or "invest" in lower:
+        desired_relations.add("INVESTS_IN")
+    if "vận hành" in lower or "operates" in lower:
+        desired_relations.update({"OPERATES", "OPERATES_IN"})
+    if "mua" in lower or "acquired" in lower:
+        desired_relations.update({"ACQUIRED", "ACQUIRED_IN"})
+
+    selected = [t for t in triples if t["relation"] in desired_relations] if desired_relations else triples[:8]
 
     if not selected:
         selected = triples[:8]
@@ -117,20 +124,23 @@ def generate_answer(question: str, context: str) -> tuple[str, dict]:
     start = time.time()
     client = OpenAI()
     model = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
-    response = client.chat.completions.create(
-        model=model,
-        temperature=0,
-        messages=[
-            {
-                "role": "system",
-                "content": (
-                    "Bạn là trợ lý GraphRAG. Chỉ trả lời dựa trên graph context. "
-                    "Nếu context không đủ, nói rõ là không tìm thấy thông tin."
-                ),
-            },
-            {"role": "user", "content": f"Graph context:\n{context}\n\nCâu hỏi: {question}"},
-        ],
-    )
+    try:
+        response = client.chat.completions.create(
+            model=model,
+            temperature=0,
+            messages=[
+                {
+                    "role": "system",
+                    "content": (
+                        "Bạn là trợ lý GraphRAG. Chỉ trả lời dựa trên graph context. "
+                        "Nếu context không đủ, nói rõ là không tìm thấy thông tin."
+                    ),
+                },
+                {"role": "user", "content": f"Graph context:\n{context}\n\nCâu hỏi: {question}"},
+            ],
+        )
+    except Exception as exc:
+        return "", {"used_llm": False, "error": f"{type(exc).__name__}: {exc}"}
     usage = response.usage
     return response.choices[0].message.content or "", {
         "used_llm": True,
