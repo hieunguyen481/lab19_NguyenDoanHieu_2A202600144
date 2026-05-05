@@ -7,18 +7,21 @@ $ErrorActionPreference = "Stop"
 Set-Location $PSScriptRoot
 
 if ($Mode -eq "offline") {
+    $env:USE_OPENAI_GENERATION = "0"
     Remove-Item Env:\USE_LLM_EXTRACTION -ErrorAction SilentlyContinue
     python -B src/pipeline.py
     exit $LASTEXITCODE
 }
 
 if ($Mode -eq "openai-generate") {
+    $env:USE_OPENAI_GENERATION = "1"
     Remove-Item Env:\USE_LLM_EXTRACTION -ErrorAction SilentlyContinue
     python -B src/pipeline.py
     exit $LASTEXITCODE
 }
 
 if ($Mode -eq "openai-extract") {
+    $env:USE_OPENAI_GENERATION = "1"
     $env:USE_LLM_EXTRACTION = "1"
     python -B src/pipeline.py
     exit $LASTEXITCODE

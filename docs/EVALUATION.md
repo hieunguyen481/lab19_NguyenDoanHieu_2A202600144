@@ -41,8 +41,8 @@ Context của GraphRAG là các triples có source, ví dụ:
 
 `src/evaluate.py` dùng heuristic score:
 
-- 70% dựa trên required entities.
-- 30% dựa trên required relations trong evidence/context.
+- 80% dựa trên required entities xuất hiện trong câu trả lời.
+- 20% dựa trên required relations xuất hiện trong evidence/context.
 
 Điểm này không thay thế human evaluation hoặc RAGAS, nhưng đủ minh họa sự khác biệt giữa Flat RAG và GraphRAG trong bài lab.
 

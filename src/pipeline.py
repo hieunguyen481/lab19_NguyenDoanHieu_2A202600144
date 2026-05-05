@@ -20,7 +20,7 @@ from src.graph_query import answer_question as graph_answer_question
 from src.paths import COMPARISON_REPORT_PATH, COST_REPORT_PATH, FINAL_REPORT_PATH, GRAPH_STATS_PATH
 
 
-def write_final_report(comparison: dict, graph_stats: dict, figure_created: bool) -> None:
+def write_final_report(comparison: dict, graph_stats: dict, figure_created: bool, cost: dict) -> None:
     FINAL_REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
     summary = comparison["summary"]
     graph_win_cases = [row for row in comparison["rows"] if row["winner"] == "GraphRAG"][:5]
@@ -72,8 +72,21 @@ def write_final_report(comparison: dict, graph_stats: dict, figure_created: bool
         "",
         "## 7. Chi phí",
         "",
-        "Chi phí token/time chi tiết nằm trong `reports/cost_report.json`. Khi chạy offline không có "
-        "`OPENAI_API_KEY`, token usage bằng 0 vì hệ thống dùng seed triples và fallback answers.",
+        f"- Elapsed time: {cost['elapsed_seconds']} seconds",
+        f"- Triple extraction mode: {cost['triple_extraction'].get('mode')} "
+        f"({cost['triple_extraction'].get('num_triples', 'n/a')} seed triples before dedup)",
+        f"- Flat RAG generation tokens: {cost['flat_rag_generation']['total_tokens']} "
+        f"(prompt={cost['flat_rag_generation']['prompt_tokens']}, "
+        f"completion={cost['flat_rag_generation']['completion_tokens']})",
+        f"- GraphRAG generation tokens: {cost['graphrag_generation']['total_tokens']} "
+        f"(prompt={cost['graphrag_generation']['prompt_tokens']}, "
+        f"completion={cost['graphrag_generation']['completion_tokens']})",
+        f"- API errors: Flat RAG={cost.get('flat_rag_api_errors', 0)}, "
+        f"GraphRAG={cost.get('graphrag_api_errors', 0)}",
+        "",
+        "Lưu ý: lần chạy hiện tại dùng seed triples để xây dựng graph, nên chi phí token cho bước "
+        "graph construction/entity extraction là 0. Token ở trên là chi phí sinh câu trả lời cho "
+        "20 câu Flat RAG và 20 câu GraphRAG bằng OpenAI.",
     ]
     FINAL_REPORT_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
@@ -127,7 +140,7 @@ def main() -> None:
     save_markdown_table(comparison)
     cost = summarize_cost(flat_outputs, graph_outputs, extraction_stats, time.time() - start)
     COST_REPORT_PATH.write_text(json.dumps(cost, ensure_ascii=False, indent=2), encoding="utf-8")
-    write_final_report(comparison, graph_stats, figure_created)
+    write_final_report(comparison, graph_stats, figure_created, cost)
 
     print("[7/7] Done.")
     print(f"  Flat avg: {comparison['summary']['flat_avg_score']}")

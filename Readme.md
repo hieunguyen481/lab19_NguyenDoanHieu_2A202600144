@@ -87,8 +87,8 @@ Nếu có `.venv_noderag` hoặc `__pycache__`, đó là file sinh ra khi chạy
 | Chế độ | Lệnh | Ghi chú |
 |---|---|---|
 | Offline ổn định | `python -B src/pipeline.py` | Dùng `data/seed_triples.json`, không cần API key |
-| OpenAI generate | Tạo `.env`, rồi chạy `python -B src/pipeline.py` | LLM sinh câu trả lời từ context |
-| OpenAI extract | `$env:USE_LLM_EXTRACTION="1"; python -B src/pipeline.py` | LLM extract triples từ corpus |
+| OpenAI generate | Đặt `USE_OPENAI_GENERATION=1`, rồi chạy `python -B src/pipeline.py` | LLM sinh câu trả lời từ context |
+| OpenAI extract | Đặt `USE_OPENAI_GENERATION=1` và `USE_LLM_EXTRACTION=1`, rồi chạy `python -B src/pipeline.py` | LLM extract triples từ corpus |
 | Neo4j export | `python -B src/export_neo4j.py` | Sinh `reports/neo4j_import.cypher` |
 
 PowerShell helper:
@@ -107,10 +107,11 @@ Tạo file `.env` từ `.env.example`:
 ```text
 OPENAI_API_KEY=sk-...
 OPENAI_MODEL=gpt-4o-mini
+USE_OPENAI_GENERATION=1
 USE_LLM_EXTRACTION=0
 ```
 
-Khi có `OPENAI_API_KEY`, pipeline tự bật LLM generation. Nếu `USE_LLM_EXTRACTION=1`, pipeline sẽ thử dùng LLM để extract triples; nếu lỗi hoặc không có triples hợp lệ, hệ thống fallback về `seed_triples.json`.
+Khi có `OPENAI_API_KEY` và `USE_OPENAI_GENERATION=1`, pipeline bật LLM generation. Nếu `USE_LLM_EXTRACTION=1`, pipeline sẽ thử dùng LLM để extract triples; nếu lỗi hoặc không có triples hợp lệ, hệ thống fallback về `seed_triples.json`.
 
 ## 6. Vì sao chọn NetworkX trước
 
@@ -137,13 +138,16 @@ Neo4j và NodeRAG là hướng nâng cấp, không bắt buộc để hoàn thà
 
 ## 8. Kết quả hiện tại
 
-Lần chạy offline gần nhất:
+Lần chạy OpenAI generation gần nhất:
 
 - Documents: 10
 - Triples sau dedup: 80
 - Graph nodes: 67
 - Graph edges: 94
-- Flat RAG average score: 0.903
-- GraphRAG average score: 1.0
+- Flat RAG average score: 0.922
+- GraphRAG average score: 0.98
+- Flat RAG generation tokens: 5,576
+- GraphRAG generation tokens: 11,128
+- Elapsed time: 59.435 seconds
 
 Kết quả chi tiết nằm trong `reports/comparison_report.json`.

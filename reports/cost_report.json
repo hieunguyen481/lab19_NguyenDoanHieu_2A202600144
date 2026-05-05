@@ -1,19 +1,19 @@
 {
-  "elapsed_seconds": 0.913,
+  "elapsed_seconds": 59.435,
   "triple_extraction": {
     "mode": "seed",
     "used": true,
     "num_triples": 81
   },
   "flat_rag_generation": {
-    "prompt_tokens": 0,
-    "completion_tokens": 0,
-    "total_tokens": 0
+    "prompt_tokens": 5140,
+    "completion_tokens": 436,
+    "total_tokens": 5576
   },
   "graphrag_generation": {
-    "prompt_tokens": 0,
-    "completion_tokens": 0,
-    "total_tokens": 0
+    "prompt_tokens": 10676,
+    "completion_tokens": 452,
+    "total_tokens": 11128
   },
   "flat_rag_api_errors": 0,
   "graphrag_api_errors": 0,

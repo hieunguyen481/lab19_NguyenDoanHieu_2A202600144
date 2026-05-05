@@ -19,19 +19,19 @@ Pipeline gồm các bước: load corpus, chunk documents, extract triples, dedu
 ## 4. Kết quả benchmark
 
 - Số câu hỏi: 20
-- Flat RAG average score: 0.861
-- GraphRAG average score: 0.967
-- GraphRAG thắng: 13
-- Flat RAG thắng: 2
-- Hòa: 5
+- Flat RAG average score: 0.922
+- GraphRAG average score: 0.98
+- GraphRAG thắng: 11
+- Flat RAG thắng: 1
+- Hòa: 8
 
 ## 5. Một số case GraphRAG tốt hơn
 
 - `q01`: Công ty nào do Sam Altman đồng sáng lập phát triển ChatGPT? (Flat=0.9, GraphRAG=1.0)
 - `q02`: Công ty mẹ của Google là công ty nào và CEO là ai? (Flat=0.8, GraphRAG=1.0)
-- `q03`: Những công ty nào cạnh tranh với OpenAI trong mảng AI assistant? (Flat=0.36, GraphRAG=1.0)
+- `q03`: Những công ty nào cạnh tranh với OpenAI trong mảng AI assistant? (Flat=0.84, GraphRAG=1.0)
 - `q05`: CEO của Nvidia là ai và Nvidia phát triển nền tảng nào cho AI computing? (Flat=0.9, GraphRAG=1.0)
-- `q07`: Công ty nào phát triển Claude và được Amazon cùng Google đầu tư? (Flat=0.5, GraphRAG=1.0)
+- `q07`: Công ty nào phát triển Claude và được Amazon cùng Google đầu tư? (Flat=0.9, GraphRAG=1.0)
 
 ## 6. Nhận xét
 
@@ -39,4 +39,10 @@ GraphRAG mạnh hơn ở các câu hỏi cần nối nhiều quan hệ như foun
 
 ## 7. Chi phí
 
-Chi phí token/time chi tiết nằm trong `reports/cost_report.json`. Khi chạy offline không có `OPENAI_API_KEY`, token usage bằng 0 vì hệ thống dùng seed triples và fallback answers.
+- Elapsed time: 59.435 seconds
+- Triple extraction mode: seed (81 seed triples before dedup)
+- Flat RAG generation tokens: 5576 (prompt=5140, completion=436)
+- GraphRAG generation tokens: 11128 (prompt=10676, completion=452)
+- API errors: Flat RAG=0, GraphRAG=0
+
+Lưu ý: lần chạy hiện tại dùng seed triples để xây dựng graph, nên chi phí token cho bước graph construction/entity extraction là 0. Token ở trên là chi phí sinh câu trả lời cho 20 câu Flat RAG và 20 câu GraphRAG bằng OpenAI.
